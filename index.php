@@ -1,6 +1,6 @@
 <?php
 require_once "./Includes/functions.php";
-head("Zegert Boele || Webdevelopment");
+Head("Zegert Boele || Webdevelopment", false);
 ?>
 
 <body>
@@ -74,67 +74,24 @@ head("Zegert Boele || Webdevelopment");
             </div>
         </div>
         <div class="row">
+            <?php
+$languages_stmt = SelectAll("languages", "ID", "ASC");
+while ($rowLanguages = $languages_stmt->fetch()) {
+    ?>
+            <div class="col">
+                <div class="card text-white bg-secondary text-center programLangCard">
+                    <img class="card-img-top" src="<?php echo $rowLanguages['Path']; ?>">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <?php echo $rowLanguages['Name']; ?>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <?php
+}
+?>
 
-            <div class="col">
-                <div class="card text-white bg-secondary text-center programLangCard">
-                    <img class="card-img-top" src="./Includes/IMG/PlIcons/python.png">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Python
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-white bg-secondary text-center programLangCard">
-                    <img class="card-img-top" src="./Includes/IMG/PlIcons/html.png">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            HTML 5
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-white bg-secondary text-center programLangCard">
-                    <img class="card-img-top" src="./Includes/IMG/PlIcons/css.png">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            CSS 3
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-white bg-secondary text-center programLangCard">
-                    <img class="card-img-top" src="./Includes/IMG/PlIcons/php.png">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            PHP 8.0
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-white bg-secondary text-center programLangCard">
-                    <img class="card-img-top" src="./Includes/IMG/PlIcons/python.png">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Python
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-white bg-secondary text-center programLangCard">
-                    <img class="card-img-top" src="./Includes/IMG/PlIcons/python.png">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Python
-                        </h5>
-                    </div>
-                </div>
-            </div>
         </div>
         <hr>
         <div class="row">
@@ -142,55 +99,33 @@ head("Zegert Boele || Webdevelopment");
                 <h1 class="H1">Projects</h1>
             </div>
         </div>
+        <?php
+
+$projects_stmt = Conn()->prepare("SELECT * FROM projects ORDER BY ID ASC");
+$projects_stmt->execute();
+$projects_stmt = SelectAll("projects", "ID", "ASC", );
+while ($rowProjects = $projects_stmt->fetch()) {
+    ?>
         <div class="row justify-content-center">
             <div class="col portfolio-item">
                 <div class="card text-white bg-secondary">
-                    <img class="card-img-top" src="./Includes/IMG/img1.jpg" alt="">
+                    <img class="card-img-top" src="<?php echo $rowProjects['Photo1']; ?>" alt="">
                     <div class="card-body">
-                        <h4 class="card-title">This is an awesome card used for showing</h4>
+                        <h4 class="card-title"><?php echo $rowProjects['Name']; ?></h4>
                         <p class="card-text">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui itaque aliquam nulla quaerat
-                            expedita neque! Dicta, molestias natus placeat quaerat, dignissimos adipisci dolore
-                            voluptatibus id repellat neque maiores possimus! Necessitatibus?
+                            <?php echo $rowProjects['ShortDescription']; ?>
                         </p>
                     </div>
                     <div class="card-body">
-                        <a href="project-page.php?ID=" class="btn btn-secondary">Details</a>
+                        <a href="project-page.php?ID=<?php echo $rowProjects['ID']; ?>"
+                            class="btn btn-secondary">Details</a>
                     </div>
                 </div>
             </div>
-            <div class="col portfolio-item">
-                <div class="card text-white bg-secondary">
-                    <img class="card-img-top" src="./Includes/IMG/img1.jpg" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">This is an awesome card used for showing</h4>
-                        <p class="card-text">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui itaque aliquam nulla quaerat
-                            expedita neque! Dicta, molestias natus placeat quaerat, dignissimos adipisci dolore
-                            voluptatibus id repellat neque maiores possimus! Necessitatibus?
-                        </p>
-                    </div>
-                    <div class="card-body">
-                        <a href="project-page.php?ID=" class="btn btn-secondary">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col portfolio-item">
-                <div class="card text-white bg-secondary">
-                    <img class="card-img-top" src="./Includes/IMG/img1.jpg" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">This is an awesome card used for showing</h4>
-                        <p class="card-text">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui itaque aliquam nulla quaerat
-                            expedita neque! Dicta, molestias natus placeat quaerat, dignissimos adipisci dolore
-                            voluptatibus id repellat neque maiores possimus! Necessitatibus?
-                        </p>
-                    </div>
-                    <div class="card-body">
-                        <a href="project-page.php?ID=" class="btn btn-secondary">Details</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+
+}
+?>
         </div>
         <hr>
         <form action="" method="POST">
