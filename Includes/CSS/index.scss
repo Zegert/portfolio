@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
 $fontColor: #eeeeee;
 $backgroundColor: #222222;
 $cardBackgroundColor : #444444;
@@ -97,6 +96,6 @@ body {
     width: 30px;
 }
     
-// Pointer!
-@import "pointer", "admin";
+// Pointer
+@import "pointer";
 

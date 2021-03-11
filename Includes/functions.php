@@ -1,13 +1,13 @@
 <?php
 
-function Head($title, $extraCSS = false, $adminCSS = false)
+function Head($title, $standardCSS = false, $adminCSS = false)
 {
     echo "<!DOCTYPE html>";
     echo "<html lang='en'>";
     echo "<head>";
     echo "<meta charset='UTF-8'>";
     echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
-    if ($extraCSS == true) {
+    if ($standardCSS == true) {
         // Favicon
         echo "<link rel='shortcut icon' href='./Includes/IMG/favicon.ico' type='image/x-icon' />";
         // Reset CSS
@@ -22,8 +22,8 @@ function Head($title, $extraCSS = false, $adminCSS = false)
         echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity'sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin='anonymous'></script>";
     }
     if ($adminCSS == true) {
-        // Special admin CSS
-        echo "<link href='../admin/Includes/index.css' rel='stylesheet'>";
+        // Reset CSS
+        echo "<link rel='stylesheet' href='./Includes/CSS/reset.css'>";
         // Favicon
         echo "<link rel='shortcut icon' href='../Includes/IMG/favicon.ico' type='image/x-icon' />";
         // Bootstrap CSS
@@ -32,7 +32,8 @@ function Head($title, $extraCSS = false, $adminCSS = false)
         echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js' integrity='sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==' crossorigin='anonymous'></script>";
         // Jquery
         echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity'sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin='anonymous'></script>";
-
+        // Special admin CSS
+        echo "<link href='../admin/Includes/index.css' rel='stylesheet'>";
     }
     // Variable Title
     echo "<title>" . $title . "</title>";
