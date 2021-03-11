@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
 $fontColor: #eeeeee;
 $backgroundColor: #222222;
 $cardBackgroundColor : #444444;
 $montserrat : 'Montserrat', sans-serif;
 $fontsizeText: 16px;
 $fontsizeH1: 45px;
+$icon-color: white;
 
 body {
     min-width:100vw;
@@ -90,12 +92,11 @@ body {
         color:$fontColor;
 
     }
-    .portfolio-item:hover {
-
-    }
-
-    .textarea {
-        // width: 60vw;
-    }
+}
+.edit-img {
+    width: 30px;
 }
     
+// Pointer!
+@import "pointer", "admin";
+

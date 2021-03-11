@@ -1,27 +1,38 @@
 <?php
 
-function Head($title, $extraCSS)
+function Head($title, $extraCSS = false, $adminCSS = false)
 {
     echo "<!DOCTYPE html>";
     echo "<html lang='en'>";
     echo "<head>";
     echo "<meta charset='UTF-8'>";
     echo "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
-    // Favicon
-    echo "<link rel='shortcut icon' href='./Includes/IMG/favicon.ico' type='image/x-icon' />";
-    // Reset CSS
-    echo "<link rel='stylesheet' href='./Includes/CSS/reset.css'>";
-    // Bootstrap CSS
-    echo "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css' integrity='sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==' crossorigin='anonymous' />";
-    // Main CSS
-    echo "<link rel='stylesheet' href='./Includes/CSS/index.css'>";
     if ($extraCSS == true) {
-        // Admin panel CSS
-        echo "<link href='./Includes/index.css' rel='stylesheet'>";
+        // Favicon
+        echo "<link rel='shortcut icon' href='./Includes/IMG/favicon.ico' type='image/x-icon' />";
+        // Reset CSS
+        echo "<link rel='stylesheet' href='./Includes/CSS/reset.css'>";
+        // Bootstrap CSS
+        echo "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css' integrity='sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==' crossorigin='anonymous' />";
+        // Main CSS
+        echo "<link rel='stylesheet' href='./Includes/CSS/index.css'>";
         // Bootstrap JS
         echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js' integrity='sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==' crossorigin='anonymous'></script>";
         // Jquery
         echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity'sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin='anonymous'></script>";
+    }
+    if ($adminCSS == true) {
+        // Special admin CSS
+        echo "<link href='../admin/Includes/index.css' rel='stylesheet'>";
+        // Favicon
+        echo "<link rel='shortcut icon' href='../Includes/IMG/favicon.ico' type='image/x-icon' />";
+        // Bootstrap CSS
+        echo "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css' integrity='sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==' crossorigin='anonymous' />";
+        // Bootstrap JS
+        echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js' integrity='sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==' crossorigin='anonymous'></script>";
+        // Jquery
+        echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity'sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin='anonymous'></script>";
+
     }
     // Variable Title
     echo "<title>" . $title . "</title>";
@@ -38,7 +49,7 @@ function Session()
 function CheckRank($rank)
 {
     if (Session() >= $rank) {
-        header('Location: ../index.php');
+        header('Location: ../');
     }
 }
 

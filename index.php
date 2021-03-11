@@ -1,6 +1,6 @@
 <?php
 require_once "./Includes/functions.php";
-Head("Zegert Boele || Webdevelopment", false);
+Head("Zegert Boele || Webdevelopment", true, false);
 ?>
 
 <body>
@@ -15,6 +15,18 @@ Head("Zegert Boele || Webdevelopment", false);
             <div class="row">
                 <h3 class="subtitle">Programming, Coffee, Sleep, Repeat</h2>
             </div>
+            <div class="row">
+                <div class="mousescroll">
+                    <div class="icon-scroll">
+                        <div class="mouse">
+                            <div class="wheel"></div>
+                        </div>
+                        <div class="icon-arrows">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <hr>
         <div class="row">
@@ -26,7 +38,8 @@ Head("Zegert Boele || Webdevelopment", false);
             <div class="col-8">
                 <p class="aboutmeText">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus quod obcaecati facilis nihil
-                    alias quia, doloribus accusantium aliquid. Dolore non alias animi iusto recusandae corporis maxime
+                    alias quia, doloribus accusantium aliquid. Dolore non alias animi iusto recusandae corporis
+                    maxime
                     expedita delectus minus eius!<br>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil illo commodi, dolores
                     praesentium nisi consectetur perferendis eveniet nam fuga accusantium dolorum quis similique
@@ -37,16 +50,22 @@ Head("Zegert Boele || Webdevelopment", false);
                     laboriosam sunt quis aut exercitationem autem. Ipsum, illo. Eum nulla sed nihil nostrum nam
                     voluptatibus est ipsum explicabo.<br>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste eius doloribus animi officia quia
-                    nihil repudiandae voluptate, minima id debitis fuga sint quod, quis ut ipsam tenetur in accusamus
+                    nihil repudiandae voluptate, minima id debitis fuga sint quod, quis ut ipsam tenetur in
+                    accusamus
                     harum.<br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquam totam doloribus voluptates!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquam totam doloribus
+                    voluptates!
                     Necessitatibus nostrum provident, odio officia culpa pariatur consectetur placeat rerum quia aut
                     enim iste minus vel optio!<br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis rerum vel nulla nobis natus
-                    adipisci laudantium velit. Itaque repellat ea ab placeat dignissimos, magni quasi eaque? Mollitia,
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis rerum vel nulla nobis
+                    natus
+                    adipisci laudantium velit. Itaque repellat ea ab placeat dignissimos, magni quasi eaque?
+                    Mollitia,
                     quam quos.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellat placeat ab impedit itaque
-                    doloremque, a magni quidem facilis natus sed reprehenderit illum, quia dolorem repudiandae tenetur,
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellat placeat ab impedit
+                    itaque
+                    doloremque, a magni quidem facilis natus sed reprehenderit illum, quia dolorem repudiandae
+                    tenetur,
                     excepturi consequuntur qui!praesentium nisi consectetur perferendis eveniet nam fuga accusantium
                     dolorum quis similique
                     delectus, blanditiis corporis. Consequuntur, aperiam corporis!
@@ -56,9 +75,11 @@ Head("Zegert Boele || Webdevelopment", false);
                     laboriosam sunt quis aut exercitationem autem. Ipsum, illo. Eum nulla sed nihil nostrum nam
                     voluptatibus est ipsum explicabo.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste eius doloribus animi officia quia
-                    nihil repudiandae voluptate, minima id debitis fuga sint quod, quis ut ipsam tenetur in accusamus
+                    nihil repudiandae voluptate, minima id debitis fuga sint quod, quis ut ipsam tenetur in
+                    accusamus
                     harum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquam totam doloribus voluptates!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquam totam doloribus
+                    voluptates!
                     Necessitatibus nostrum provident, odio officia culpa pariatur consectetur placeat rerum quia aut
                     enim iste minus vel optio!
                 </p>

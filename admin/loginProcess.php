@@ -14,5 +14,5 @@ if (password_verify($password, $row['Password'])) {
         header("Location: home.php");
     }
 } else {
-    header("Location: ../index.php");
+    header("Location: ../");
 }

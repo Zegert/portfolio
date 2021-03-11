@@ -19,7 +19,7 @@ Head("Admin panel || Zegert Boele || Webdevelopemnt", true);
                     autocomplete="current-password" placeholder="Wachtwoord..."><br>
 
                 <input type="submit" class="input fadeIn fourth" id="submit" value="Login" name="submit"><br>
-                <a href="../index.php">Ga terug</a>
+                <a href="../">Ga terug</a>
             </form>
         </div>
 </body>
